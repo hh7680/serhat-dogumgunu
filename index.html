@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>İyi ki doğdun sevgilim ❤️</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #eee8e3;
+            color: #2c2224;
+            font-family: "Inter", sans-serif;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: clamp(60px, 9vw, 105px);
+            line-height: 0.86;
+            margin: 25px 0;
+        }
+
+        h1 span {
+            display: block;
+        }
+
+        h2 {
+            font-size: clamp(45px, 7vw, 75px);
+            margin: 15px 0 25px;
+        }
+
+        p {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+            line-height: 1.65;
+        }
+
+        .heart {
+            color: #a6223b;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 13px 25px;
+            border: 1px solid #796a6c;
+            border-radius: 30px;
+            color: #2c2224;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #2c2224;
+            color: white;
+        }
+
+
+        /* =========================
+           1 — İLK SAYFA
+        ========================= */
+
+        .hero {
+            text-align: center;
+            background: #eee8e3;
+        }
+
+        .hero p {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .hero .heart {
+            font-size: 23px;
+            margin: 30px;
+        }
+
+
+        /* =========================
+           2 — HİKAYEMİZ
+        ========================= */
+
+        .story {
+            background: #f5f0ec;
+        }
+
+        .line {
+            width: 45px;
+            height: 1px;
+            background: #a6223b;
+            margin: 30px 0;
+        }
+
+        .timeline {
+            border-left: 1px solid #b7a8a9;
+            padding-left: 30px;
+            margin-top: 30px;
+        }
+
+        .story-item {
+            margin-bottom: 35px;
+        }
+
+        .story-item strong {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 22px;
+        }
+
+        .story-item p {
+            font-size: 18px;
+            margin-top: 7px;
+        }
+
+
+        /* =========================
+           3 — İLK VİDEO
+        ========================= */
+
+        .video-section {
+            text-align: center;
+        }
+
+        .video-box {
+            width: 100%;
+            max-width: 680px;
+            aspect-ratio: 16 / 9;
+            background: #e1dad5;
+            border: 1px solid #b9abad;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 35px auto 20px;
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .video-box span {
+            font-size: 11px;
+            letter-spacing: 1px;
+            opacity: 0.5;
+        }
+
+
+        /* =========================
+           4 — SENDE SEVDİĞİM ŞEYLER
+        ========================= */
+
+        .things {
+            background: #f5f0ec;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .card {
+            padding: 27px;
+            border: 1px solid #d1c5c1;
+            background: #eee8e3;
+        }
+
+        .card h3 {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           5 — UZUN YAZI
+        ========================= */
+
+        .letter {
+            background: #2b2022;
+            color: #f5eee9;
+        }
+
+        .letter h2 {
+            color: white;
+        }
+
+        .letter .line {
+            background: #c23a52;
+        }
+
+        .letter p {
+            font-size: 21px;
+            color: #eee3df;
+            white-space: pre-line;
+        }
+
+        .signature {
+            margin-top: 35px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 27px;
+        }
+
+
+        /* =========================
+           6 — BİR GÜN
+        ========================= */
+
+        .future {
+            background: #eee8e3;
+        }
+
+        .future-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .future-item {
+            padding: 20px;
+            border-bottom: 1px solid #cdbfc0;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           7 — ŞARKILAR
+        ========================= */
+
+        .songs {
+            text-align: center;
+            background: #f5f0ec;
+        }
+
+        .song {
+            padding: 18px;
+            border-bottom: 1px solid #d2c7c4;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 21px;
+        }
+
+
+        /* =========================
+           8 — SADECE AŞK VAR
+        ========================= */
+
+        .love {
+            text-align: center;
+        }
+
+
+        /* =========================
+           9 — SON
+        ========================= */
+
+        .final {
+            text-align: center;
+            background: #2b2022;
+            color: #f5eee9;
+        }
+
+        .final h2 {
+            font-size: clamp(55px, 8vw, 90px);
+        }
+
+        .final p {
+            opacity: 0.7;
+        }
+
+
+        /* TELEFON */
+        @media (max-width: 650px) {
+
+            section {
+                padding: 65px 7%;
+            }
+
+            .cards,
+            .future-list {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 22px;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         1 — İLK SAYFA
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                07 · 10 · 2026
+            </div>
+
+            <h1>
+                <span>İyi ki doğdun</span>
+                <span>sevgilim.</span>
+            </h1>
+
+            <div class="heart">
+                ♥
+            </div>
+
+            <p>
+                Bugün sana anlatmak istediğim çok şey var.
+            </p>
+
+            <a href="#story" class="button">
+                BAŞLAYALIM ↓
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         2 — BİZİM HİKAYEMİZ
+    ========================= -->
+
+    <section class="story" id="story">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                01 — BİZ
+            </div>
+
+            <h2>
+                Bizim hikâyemiz
+            </h2>
+
+            <div class="line"></div>
+
+
+            <div class="timeline">
+
+                <div class="story-item">
+
+                    <strong>
+                        Rastgele bir takip ve herseyin baslangıcı
+                    </strong>
+
+                    <p>
+                        Hatırlıyormusun ilk tanıştığımız günü, videon keşfetime düşmüştü bende beğenmiştim sonra takipleştlk sen tanışalımmı dediğinde abi ben küçüğüm demiştim KFSKKKZEK sonra herşey çok hızlı gelişti nasıl sana bu kadar bağlandım nasıl bu kadar aşık oldum bende anlayamadım.
+                    </p>
+
+                </div>
+
+
+                <div class="story-item">
+
+                    <strong>
+                        Sonra “biz” olduk.
+                    </strong>
+
+                    <p>
+                        İşte sonra biz olduk ve ben o günden sonra (9 mayıs 2026) içinde senin olmadığın tek bir hayal bile kurmadım. Bu kısımda güzel bir anımızı yazmak istedim o yüzden ilk karşılaştığımız andan bahsedicem. Seni ilk gördüğümde cidden şok olmuştum buraya kadar geleceğini hiç düşünmemiştim sen seni beğenmediğimi düşünmüştün ama ben sadece şaşırdığım için öyleydim ve o gün çok mutlu olmuştum iyiki geldinn.
+                    </p>
+
+                </div>
+
+
+                <div class="story-item">
+
+                    <strong>
+                        Ve bugün.
+                    </strong>
+
+                    <p>
+                        Aslında hediye almayı düşündüm ama buluşur muyuz buluşamaz mıyız bilemedim bide öyle klasik bir hediye olsun istemedim içinde benim emeğim olsun istedim. Bugün benimle olan ilk doğum günün umarım biraz da olsa yüzünü güldürebilmişimdir seni çok seviyorum iyiki doğdun sevgilim.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         3 — EL ELE VİDEOSU
+    ========================= -->
+
+    <section class="video-section">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                02 — O AN
+            </div>
+
+            <h2>
+                El ele.
+            </h2>
+
+            <p>
+                Sadece el ele yürüyüdüğümüz bir an
+            </p>
+
+
+            <div class="video-box">
+
+                <video controls playsinline style="width: 100%; height: 100%; object-fit: contain;">
+                    <source src="video1.mp4" type="video/mp4">
+                    Tarayıcın videoyu desteklemiyor.
+                </video>
+
+            </div>
+
+
+            <p>
+                Bazı anların güzel olması için büyük bir şey olması gerekmiyor seninle el ele sadece yürümek bile benim için çok değerli.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         4 — SENDE SEVDİĞİM ŞEYLER
+    ========================= -->
+
+    <section class="things">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                03 — SEN
+            </div>
+
+            <h2>
+                Sende sevdiğim şeyler
+            </h2>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <h3>
+                        Gülüşün
+                    </h3>
+
+                    <p>
+                        Gülüşünü gördüğümde benim de yüzümün gülmesi.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Huzurun
+                    </h3>
+
+                    <p>
+                        Bazen sadece seni düşünmem bile huzur veriyor, hayatımda oluşun huzur veriyor.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Sesin
+                    </h3>
+
+                    <p>
+                        Sesini duymak ayrı bir mutluluk veriyordu, sesini çok özledim...
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Olduğun kişi
+                    </h3>
+
+                    <p>
+                        Seni sen olduğun için seviyorum bana karşı olan dürüstlüğün için, sabrın için, en önemliside olanlardan sonra, benim herşeyi çok kafama takıp sürekli sorun çıkarmamdan sonra beni bırakmadığın için.
+                    </p>
+
+                </div>
+
+
+                </div class="card">
+                    <h3>
+                        “Biz”
+                    </h3>
+
+                    <p>
+                        En sevdiğim şeyse herşeye rağmen biz olarak kalabilmemiz.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         5 — UZUN PARAGRAF
+    ========================= -->
+
+    <section class="letter">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                04 — SANA
+            </div>
+
+            <h2>
+                Sana söylemek istediklerim
+            </h2>
+
+            <div class="line"></div>
+
+
+            <p>
+
+Bugün senin doğum günün sadece doğum günün kutlu olsun demek istemedim.
+
+Hayatıma girdiğin için, birlikte yaşadığımız güzel anlar için ve bana kendimi çok özel hissettirdiğin için ilk defa bana sevginin ne olduğunu öğrettiğin için hem nasıl sevmem gerektiğini hemde birisinin beni sevebileceğini öğrettiğin için teşekkür ederim.
+
+Bazen herşeyi kafama taksamda seni çok darlasamda bilmeni istediğim bir şey var: Sen benim için cidden çok değerlisin sana olan sevgimden asla şüphen olmasın yolumuz ne kadar uzun ne kadar zor olursa olsun, karşımıza ne kadar engel çıkarsa çıksın sen yanımda olduğun sürece ben seninle herşeyin üsteslnden gelmeye hazırım. Sormuştun ya niye benden ayrılmayı hiç düşünmüyorsun diye çünkü daha önce kimse bana bu kadar değer vermemişti kimse beni bu kadar sevmemişti ve bende ilk defa böyle hissediyorum ilk aşkım sensin doğal olarakta seni kaybetmekten, birgün gitmenden çok korkuyorum. Gelecekte ne olacağını bilemeyiz ama Allah nasip ederse geleceğimde senin olmanı istiyorum hergün bunun için dua ediyorum. Bazen çok tartışıyoruz bazen birbirimizi kırıyoruz ama ben senden başkasını sevmek istemiyorum, seninle kurduğum hayalleri başkasıyla yaşamak istemiyorum bazen çok sinirlensemde çok kırılsamda senden vazgeçemem içimdeki küçük Havin seni seçti :)
+
+Yeni yaşında lnşallah herşey gönlünce olur inşallah herşey yoluna glrer Allah blze blrgün bugünü kendi evimizde kutlamayı nasip etsin beraber nice senelere bitanem.
+
+
+İyi ki doğdun sevgilim. İyiki varsın. Seni çok seviyorum💙
+
+            </p>
+
+
+            <div class="signature">
+                — Havin ♥
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         6 — BİR GÜN
+    ========================= -->
+
+    <section class="future">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                05 — BİR GÜN
+            </div>
+
+            <h2>
+                Bir gün…
+            </h2>
+
+            <p>
+                Henüz yaşamadığımız ama yaşamayı istediğim küçük şeyler.
+            </p>
+
+
+            <div class="future-list">
+
+                <div class="future-item">
+                    Birlikte uzun bir yürüyüş.
+                </div>
+
+                <div class="future-item">
+                    Beraber Elffel kuleslne gltmek.
+                </div>
+
+                <div class="future-item">
+                    Birlikte uzun yolculuk yapmak.
+                </div>
+
+                <div class="future-item">
+                    Ttdekl tüm sevgili akımlarını yapmak.
+                </div>
+
+                <div class="future-item">
+                    Evlenmek, küçük huzur dolu yuvamızı kurmak.
+                </div>
+
+                <div class="future-item">
+                    Beraber babamın mezarına gitmek.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         7 — ŞARKILAR
+    ========================= -->
+
+    <section class="songs">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                06 — MÜZİK
+            </div>
+
+            <h2>
+                Bizi hatırlatan şarkılar
+            </h2>
+
+
+            <div class="song">
+                ♡ Bu bizim şarkımız olduğu için 
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3hZ9hUrR9DZcsxUmBKAqCk?utm_source=generator&si=dc0677079f8847f7" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song">
+                ♡ Her dinlediğimde aklıma sen geliyorsun
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/01BIEhvSOowecScRovMFll?utm_source=generator&si=834022ead1324d29" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="song">
+                ♡ Mesafelerin önemi yok...
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7AeN1Miu6Io3ewNUdBzhyy?utm_source=generator&si=c6fb9713659b4297" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         8 — SADECE AŞK VAR
+    ========================= -->
+
+    <section class="love">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                07 — SADECE AŞK VAR
+            </div>
+
+            <h2>
+                Sadece aşk var.
+            </h2>
+
+            <p>
+              O gün sadece aşk vardı senin yanındayken sadece huzur aşk mutluluk güven var.
+            </p>
+
+
+            <div class="video-box">
+
+                <video controls playsinline style="width: 100%; height: 100%; object-fit: contain;">
+                    <source src="video2.mp4" type="video/mp4">
+                    Tarayıcın videoyu desteklemiyor.
+                </video>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         9 — SON SAYFA
+    ========================= -->
+
+    <section class="final">
+
+        <div class="container">
+
+            <div class="heart">
+                ♥
+            </div>
+
+            <h2>
+                İyi ki doğdun,
+                <br>
+                Ömrümmm
+            </h2>
+
+            <p>
+                Bu küçük dünyamın, küçük kalbimin en güzel kısmı, en değer verdiğim kişisi sensin.
+            </p>
+
+            <br>
+
+            <div class="heart">
+                — Havin ♥
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
